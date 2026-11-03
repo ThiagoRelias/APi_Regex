@@ -34,6 +34,7 @@ public record EventoDTO(
         @NotBlank(message = "O número é obrigatório")
         String numero,
 
+        @NotNull(message = "O CEP é obrigatório")
         @Pattern(regexp = "^\\d{5}-\\d{3}$", message = "O CEP deve seguir o formato XXXXX-XXX")
         String cep
 ) {
